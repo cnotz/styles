@@ -37,10 +37,10 @@
           <if variable="container-author" match="any">
           <text variable="container-title"/>
           </if>
-          <if type="article-journal article-magazine" match="any">
+          <else-if type="article-journal article-magazine" match="any">
             <text term="in" text-case="capitalize-first" suffix=": "/>
             <text variable="container-title"/>
-          </if>
+          </else-if>
          
           <else>
             <text term="in" text-case="capitalize-first" suffix=": "/>

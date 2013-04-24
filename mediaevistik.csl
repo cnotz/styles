@@ -10,7 +10,7 @@
     <category citation-format="note"/>
     <category field="humanities"/>
     <summary>Format for the studies of Old High German Literature at the University of Zurich</summary>
-    <updated>2013-04-24T12:21:32+00:00</updated>
+    <updated>2013-04-24T16:41:32+02:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <locale xml:lang="de">
@@ -35,13 +35,12 @@
       <if variable="container-title">
         <choose>
           <if variable="container-author" match="any">
-          <text variable="container-title"/>
+          <text variable="container-title" suffix="."/>
           </if>
           <else-if type="article-journal article-magazine" match="any">
             <text term="in" text-case="capitalize-first" suffix=": "/>
             <text variable="container-title"/>
           </else-if>
-         
           <else>
             <text term="in" text-case="capitalize-first" suffix=": "/>
             <text variable="container-title" suffix="."/>
@@ -53,7 +52,7 @@
   <macro name="container-author">
     <names variable="container-author" delimiter=": ">
       <label form="short"/>
-      <name delimiter="/" delimiter-precedes-last="always" prefix="In: "> 
+      <name delimiter="/" delimiter-precedes-last="always" prefix="In: " suffix=": "> 
         <name-part name="family" font-variant="small-caps"/>
       </name>
     </names>
@@ -143,7 +142,7 @@
   </macro>
   <macro name="pages">
     <label variable="page" text-case="capitalize-first" form="short"/>
-    <text variable="page" prefix=" "/>
+    <text variable="page" prefix=" "/>
   </macro>
   <macro name="access">
     <choose>
